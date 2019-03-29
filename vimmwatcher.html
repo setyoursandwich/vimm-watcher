@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="vimmwatcher.js"></script>
+        <script>
+            watcher = new VimmWatcher();
+            //initiaze the object by defining the channel to watch
+            watcher.initialize("foreveraverage");
+            //start watching the channel with an interval of one second
+            watcher.start(1);
+            //define a custom callback with every callback, exaple gets the viewerlist and logs it
+            watcher.setCustomCallBack( function(){
+                let viewers = watcher.viewers;
+                console.log( viewers );
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
